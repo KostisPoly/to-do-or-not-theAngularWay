@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, rgba(94, 99, 62,0.6), rgba(255,255,0,0.6)), url('assets/to-do-or-not.png');
+    background-color: yellow;
+    color: white;
+    padding-top: 20vh;
+}
+
+.item-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input-item {
+    border: 0;
+    background: transparent;
+    outline: 0;
+    font-size: 1.6rem;
+    text-align: center;
+    color: white;
+}
+
+.move {
+    font-size: 1.8rem;
+}
