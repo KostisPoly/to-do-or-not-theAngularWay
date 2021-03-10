@@ -16,4 +16,11 @@ export class NotTodosComponent implements OnInit {
     });
   }
 
+  moveEvent(ntodo) {
+    console.log(ntodo);
+    this.todoService.getNotTodos().subscribe(ntodos => {
+      this.ntodos = ntodos;
+      location.reload();
+    });
+  }
 }

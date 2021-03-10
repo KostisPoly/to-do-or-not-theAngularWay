@@ -1,3 +1,7 @@
 <h1>The Nots!!</h1>
-<app-not-todo-item *ngFor="let ntodo of ntodos" [ntodo]="ntodo">
+<app-not-todo-item 
+    *ngFor="let ntodo of ntodos" 
+    [ntodo]="ntodo"
+    (moveEvent)="moveEvent($event)"
+    >
 </app-not-todo-item>

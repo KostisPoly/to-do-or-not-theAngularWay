@@ -1,5 +1,5 @@
 <div class="item-container">
-    <button (click)="onDelete(todo)">&#10060;</button>
+    <button class="delete" (click)="onDelete(todo)">&#10060;</button>
     <!-- <p>{{todo.title}}</p> -->
     <input class="input-item" type="text" readonly value={{todo.title}}>
     <button class="move" (click)="onToggle(todo)">&#8649;</button>

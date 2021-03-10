@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Todo } from '../../models/Todo'
 import { TodoService } from '../../services/todo.service'
 @Component({
@@ -16,4 +16,11 @@ export class TodosComponent implements OnInit {
     });
   }
 
+  moveEvent(todo) {
+    console.log(todo);
+    this.todoService.getTodos().subscribe(todos => {
+      this.todos = todos;
+    });
+    location.reload();
+  }
 }

@@ -29,6 +29,7 @@ a {
 .item-container {
     display: flex;
     justify-content: space-evenly;
+    margin: 1vh;
 }
 
 .input-item {
@@ -42,4 +43,9 @@ a {
 
 .move {
     font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.delete {
+    cursor: pointer
 }

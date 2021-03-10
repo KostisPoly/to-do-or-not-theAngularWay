@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {Todo} from '../../models/Todo'
+import { TodoService } from '../../services/todo.service'
 @Component({
   selector: 'app-not-todo-item',
   templateUrl: './not-todo-item.component.html',
@@ -7,13 +8,15 @@ import {Todo} from '../../models/Todo'
 })
 export class NotTodoItemComponent implements OnInit {
   @Input() ntodo: Todo;
-  constructor() { }
+  @Output() moveEvent: EventEmitter<Todo> = new EventEmitter();
+  constructor(private todoService:TodoService) { }
 
   ngOnInit(): void {
   }
 
   onToggle(ntodo) {
-    console.log("Move to to-dos");
+    this.todoService.postMove(ntodo).subscribe(ntodo => console.log(ntodo));
+    this.moveEvent.emit(ntodo);
   }
 
   onDelete(ntodo) {
